@@ -37,9 +37,9 @@ The init function accept a second argument for options:
 await Web3Provider.init(page, options);
 ```
 
-- privateKey? : string | If omitted playwright-web3-provider will create a random wallet instead
-- rpcUrl? : string | if omitted default to `http://127.0.0.1:8545` as per [JsonRpcProvider](https://docs.ethers.io/v5/api/providers/jsonrpc-provider/#JsonRpcProvider)
-- chainId? : string
+- `privateKey`? : string | If omitted playwright-web3-provider will create a random wallet instead
+- `rpcUrl`? : string | if omitted default to `http://127.0.0.1:8545` as per [JsonRpcProvider](https://docs.ethers.io/v5/api/providers/jsonrpc-provider/#JsonRpcProvider)
+- `chainId`? : string
 
 ---
 
