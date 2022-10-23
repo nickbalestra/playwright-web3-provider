@@ -36,7 +36,7 @@ test("Connected wallet", async ({ page }) => {
 ## Environment variables
 
 playwright-web3-provider support the following environment variables.
-Below an example to run it on a local hardhat node
+Below an example to run it on a local [hardhat node](https://hardhat.org/hardhat-network/docs/reference#initial-state)
 
 ```env
 E2E_WALLET_PRIVATE_KEY = 0xac0974bec39a17e36ba...
