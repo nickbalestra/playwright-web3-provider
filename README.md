@@ -4,13 +4,13 @@ A little provider util for runnign E2E tests with playwright
 
 ## Quickstart
 
-**Install** (soon)
+**Step 1: Install** (soon)
 
 ```
 npm install --save-dev playwright-web3-provider
 ```
 
-**Import and initialize** in your tests/fixtures
+**Step 2: Import and initialize** in your tests/fixtures
 
 ```ts
 import { test, expect } from "@playwright/test";
@@ -30,6 +30,8 @@ test("Connected wallet", async ({ page }) => {
   await expect(balance).toContainText("Balance: 10000.0 ETH");
 });
 ```
+
+**Step 3: Done**, there is no step 3 - just write tests.
 
 ## Options
 
