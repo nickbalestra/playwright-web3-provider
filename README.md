@@ -44,7 +44,11 @@ E2E_PROVIDER_RPC_URL   = http://127.0.0.1:8545
 E2E_PROVIDER_CHAIN_ID  = 31337
 ```
 
-Note: if `E2E_WALLET_PRIVATE_KEY` is omitted playwright-web3-provider will create a random wallet instead.
+Notes
+
+- `E2E_WALLET_PRIVATE_KEY`: optionnal - if omitted playwright-web3-provider will create a random wallet instead.
+- `E2E_PROVIDER_RPC_URL`: optional - if omitted default to `http://127.0.0.1:8545` as per [JsonRpcProvider](https://docs.ethers.io/v5/api/providers/jsonrpc-provider/#JsonRpcProvider)
+- `E2E_PROVIDER_CHAIN_ID`: optional
 
 Make sure you enable dotenv in your `playwright.config`
 
