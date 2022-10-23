@@ -28,7 +28,7 @@ test("Connected wallet", async ({ page }) => {
   const balance = account.locator("[data-test=account-balance]");
 
   await expect(account).toBeVisible();
-  await expect(address).toContainText("Address: 0x");
+  await expect(address).toContainText("Address: 0xf39Fd6e51");
   await expect(balance).toContainText("Balance: 10000.0 ETH");
 });
 ```
@@ -69,7 +69,7 @@ test("test wallet connected", async ({ page }) => {
   const balance = account.locator("[data-test=account-balance]");
 
   await expect(account).toBeVisible();
-  await expect(address).toContainText("Address: 0x");
+  await expect(address).toContainText("Address: 0xf39Fd6e51");
   await expect(balance).toContainText("Balance: 10000.0 ETH");
 });
 ```
