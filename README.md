@@ -4,11 +4,13 @@ A little provider util for runnign E2E tests with playwright
 
 ## Quickstart
 
+**Install** (soon)
+
 ```
 npm install --save-dev playwright-web3-provider
 ```
 
-And use it on your tests
+**Import and initialize** in your tests/fixtures
 
 ```ts
 import { test, expect } from "@playwright/test";
