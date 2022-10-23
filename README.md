@@ -16,11 +16,7 @@ import * as Web3Provider from "playwright-web3-provider";
 
 test("Connected wallet", async ({ page }) => {
   // Initialize playwright-web3-provider
-  await Web3Provider.init(page, {
-    privateKey,
-    rpcUrl,
-    chainId,
-  });
+  await Web3Provider.init(page);
 
   await page.goto("http://localhost:3000/");
   const account = page.locator("[data-test=account]");
@@ -33,6 +29,20 @@ test("Connected wallet", async ({ page }) => {
 });
 ```
 
+## Options
+
+The init function accept a second argument for options:
+
+```ts
+await Web3Provider.init(page, options);
+```
+
+- privateKey? : string | If omitted playwright-web3-provider will create a random wallet instead
+- rpcUrl? : string | if omitted default to `http://127.0.0.1:8545` as per [JsonRpcProvider](https://docs.ethers.io/v5/api/providers/jsonrpc-provider/#JsonRpcProvider)
+- chainId? : string
+
+---
+
 ## Environment variables
 
 playwright-web3-provider support the following environment variables.
@@ -44,12 +54,6 @@ E2E_PROVIDER_RPC_URL   = http://127.0.0.1:8545
 E2E_PROVIDER_CHAIN_ID  = 31337
 ```
 
-Notes
-
-- `E2E_WALLET_PRIVATE_KEY`: optionnal - if omitted playwright-web3-provider will create a random wallet instead.
-- `E2E_PROVIDER_RPC_URL`: optional - if omitted default to `http://127.0.0.1:8545` as per [JsonRpcProvider](https://docs.ethers.io/v5/api/providers/jsonrpc-provider/#JsonRpcProvider)
-- `E2E_PROVIDER_CHAIN_ID`: optional
-
 Make sure you enable dotenv in your `playwright.config`
 
 ```ts
@@ -57,7 +61,7 @@ import dotenv from "dotenv";
 dotenv.config();
 ```
 
-And then you can inizialize the provider as usual withou having to pass configuration to it. Each explicit option passed will override the related environment variable value.
+And then you can inizialize the provider as usual withou having to pass configuration to it. Each explicit option passed to the initialize function will override its related environment variable's value.
 
 ```ts
 import { test, expect } from "@playwright/test";
