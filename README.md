@@ -101,7 +101,7 @@ $ npm install && npm test
 Alternative you can start dev from the root
 
 ```
-$ npm test
+$ npm run dev
 ```
 
 and manually run tests from within the [playwright VS Code](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright) extension or via cli:
