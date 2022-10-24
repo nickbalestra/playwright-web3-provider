@@ -1,4 +1,5 @@
 import { Eip1193Bridge } from "@ethersproject/experimental/lib/eip1193-bridge";
+import { E2ESetup } from ".";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function extractArgs(args: Array<any>) {
@@ -26,6 +27,8 @@ export function injectBridge(bridge: Eip1193Bridge) {
   window.ethereum = bridge;
 }
 
-export function injectSetup(initalizer) {
+export function injectSetup(
+  initalizer: ({ privateKey, rpcUrl, chainId }: E2ESetup) => void
+) {
   window.WEB3 = { ...window.WEB3, init: initalizer };
 }
