@@ -3,6 +3,7 @@ node_modules
 
 # Builds
 dist
+.turbo
 
 # Logs
 *.log
