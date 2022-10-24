@@ -20,8 +20,6 @@ function App() {
       >
         <ConnectButton />
       </div>
-      {isLoading && <div>Fetching balance…</div>}
-      {isError && <div>Error fetching balance</div>}
       {data && (
         <div
           data-test="account"
@@ -32,22 +30,20 @@ function App() {
             height: 500,
           }}
         >
-          <div>
-            <h3>From WAGMI</h3>
-            <div
-              style={{
-                backgroundColor: "#ccc",
-                padding: 36,
-                borderRadius: 5,
-                display: "inlineBlock",
-              }}
-            >
-              <div data-test="account-address">Address: {address}</div>
-              <br />
-              <br />
-              <div data-test="account-balance">
-                Balance: {data?.formatted} {data?.symbol}
-              </div>
+          <h3>Account</h3>
+          <div
+            style={{
+              backgroundColor: "#ccc",
+              padding: 36,
+              borderRadius: 5,
+              display: "inlineBlock",
+            }}
+          >
+            <div data-test="account-address">Address: {address}</div>
+            <br />
+            <br />
+            <div data-test="account-balance">
+              Balance: {data?.formatted} {data?.symbol}
             </div>
           </div>
         </div>

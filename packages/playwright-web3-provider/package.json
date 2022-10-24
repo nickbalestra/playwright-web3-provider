@@ -5,7 +5,8 @@
   "author": "Nick Balestra-Foster",
   "main": "index.ts",
   "files": [
-    "dist"
+    "dist",
+    "index.ts"
   ],
   "scripts": {
     "build": "vite build",
