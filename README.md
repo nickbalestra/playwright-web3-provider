@@ -118,4 +118,4 @@ Playwright screenshots from the included tests (using hardhat-network and first 
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Screen Shot 2022-10-24 at 1 38 32 PM](https://user-images.githubusercontent.com/389705/197625105-870abb65-65fd-429f-b6d4-cae77970aa5a.png) | ![Screen Shot 2022-10-24 at 1 38 22 PM](https://user-images.githubusercontent.com/389705/197625132-f67a29e1-b128-402c-9857-dd82696dd340.png) |
 
-Note: make sure to correctly setup `.env` (in `apps/example-app`) before running the tests. (you can rename the included `.exampledev`)
+Note: make sure to correctly setup `.env` (in `apps/example-app`) before running the tests. (you can rename the included `env.example` to get up and running)
