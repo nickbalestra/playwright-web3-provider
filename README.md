@@ -109,3 +109,9 @@ and manually run tests from within the [playwright VS Code](https://marketplace.
 ```
 $ npx playwright test
 ```
+
+Playwright screenshots from the included tests (using hardhat-network and first account/key)
+
+| Provider not initialized                                                                                                                     | Provider initialized                                                                                                                         |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Screen Shot 2022-10-24 at 1 38 32 PM](https://user-images.githubusercontent.com/389705/197625105-870abb65-65fd-429f-b6d4-cae77970aa5a.png) | ![Screen Shot 2022-10-24 at 1 38 22 PM](https://user-images.githubusercontent.com/389705/197625132-f67a29e1-b128-402c-9857-dd82696dd340.png) |
