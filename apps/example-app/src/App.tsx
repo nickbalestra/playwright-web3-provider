@@ -30,20 +30,22 @@ function App() {
             height: 500,
           }}
         >
-          <h3>Account</h3>
-          <div
-            style={{
-              backgroundColor: "#ccc",
-              padding: 36,
-              borderRadius: 5,
-              display: "inlineBlock",
-            }}
-          >
-            <div data-test="account-address">Address: {address}</div>
-            <br />
-            <br />
-            <div data-test="account-balance">
-              Balance: {data?.formatted} {data?.symbol}
+          <div>
+            <h3>Account</h3>
+            <div
+              style={{
+                backgroundColor: "#ccc",
+                padding: 36,
+                borderRadius: 5,
+                display: "inlineBlock",
+              }}
+            >
+              <div data-test="account-address">Address: {address}</div>
+              <br />
+              <br />
+              <div data-test="account-balance">
+                Balance: {data?.formatted} {data?.symbol}
+              </div>
             </div>
           </div>
         </div>
