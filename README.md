@@ -73,7 +73,9 @@ import * as Web3Provider from "playwright-web3-provider";
 
 test("test wallet connected", async ({ page }) => {
   // Initialize playwright-web3-provider
-  await Web3Provider.init(page);
+  await Web3Provider.init(page, {
+    privateKey: "0x123", // This override env E2E_WALLET_PRIVATE_KEY
+  });
 
   await page.goto("http://localhost:3000/");
   const account = page.locator("[data-test=account]");
@@ -115,3 +117,5 @@ Playwright screenshots from the included tests (using hardhat-network and first 
 | Provider not initialized                                                                                                                     | Provider initialized                                                                                                                         |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Screen Shot 2022-10-24 at 1 38 32 PM](https://user-images.githubusercontent.com/389705/197625105-870abb65-65fd-429f-b6d4-cae77970aa5a.png) | ![Screen Shot 2022-10-24 at 1 38 22 PM](https://user-images.githubusercontent.com/389705/197625132-f67a29e1-b128-402c-9857-dd82696dd340.png) |
+
+Note: make sure to correctly setup `.env` (in `apps/example-app`) before running the tests. (you can rename the included `.exampledev`)
