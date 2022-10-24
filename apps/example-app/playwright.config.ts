@@ -44,10 +44,6 @@ const config: PlaywrightTestConfig = {
     },
   ],
   outputDir: "test-results/",
-  webServer: {
-    command: "npm run dev",
-    port: 3000,
-  },
 };
 
 export default config;

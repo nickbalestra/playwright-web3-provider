@@ -87,3 +87,25 @@ test("test wallet connected", async ({ page }) => {
 ```
 
 You can find more infor about using env variable on the [playwright docs](https://playwright.dev/docs/test-parameterize#passing-environment-variables)
+
+---
+
+## Running example tests included in this repo
+
+From the root
+
+```
+$ npm install && npm test
+```
+
+Alternative you can start dev from the root
+
+```
+$ npm test
+```
+
+and manually run tests from within the [playwright VS Code](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright) extension or via cli:
+
+```
+$ npx playwright test
+```
