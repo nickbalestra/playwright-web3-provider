@@ -1,0 +1,26 @@
+{
+  "name": "playwright-web3-provider",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Nick Balestra-Foster",
+  "main": "index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "lint": "TIMING=1 eslint \"src/**/*.ts\""
+  },
+  "devDependencies": {
+    "@ethersproject/experimental": "^5.7.0",
+    "@ethersproject/providers": "^5.7.2",
+    "@ethersproject/wallet": "^5.7.0",
+    "@playwright/test": "^1.27.1",
+    "@types/node": "^18.11.4",
+    "eslint": "^8.26.0",
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8"
+  }
+}
