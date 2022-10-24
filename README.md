@@ -1,6 +1,6 @@
-# playwright-web3-provider
+# 🎭 playwright-web3-provider
 
-A little provider util for runnign E2E tests with playwright
+A little provider util for runnign E2E tests with [playwright](https://playwright.dev/)
 
 ## Quickstart
 
