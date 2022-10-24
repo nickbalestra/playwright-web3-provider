@@ -112,7 +112,7 @@ and manually run tests from within the [playwright VS Code](https://marketplace.
 $ npx playwright test
 ```
 
-Playwright screenshots from the included tests (using hardhat-network default initial state via the included `env.example`)
+Playwright screenshots from the included tests (via the included `env.example`)
 
 | Provider not initialized                                                                                                                     | Provider initialized                                                                                                                         |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
