@@ -4,7 +4,7 @@ A little provider util for runnign E2E tests with [playwright](https://playwrigh
 
 ## Quickstart
 
-**Step 1: Install** (soon)
+**Step 1: Install**
 
 ```
 npm install --save-dev playwright-web3-provider
