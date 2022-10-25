@@ -41,6 +41,15 @@ const E2E_SETUP = ({ privateKey, rpcUrl, chainId }: E2ESetup) => {
           return Promise.resolve(E2E_PROVIDER.network.chainId);
         }
       }
+      // EIP-3326
+      if (method === "wallet_switchEthereumChain") {
+        this.emit("chainChanged", params[0].chainId);
+        if (callback) {
+          callback(null);
+        } else {
+          return Promise.resolve(null);
+        }
+      }
 
       try {
         const result = await super.send(method, params);

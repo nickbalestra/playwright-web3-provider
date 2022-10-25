@@ -25,6 +25,10 @@ export function extractArgs(args: Array<any>) {
 
 export function injectBridge(bridge: Eip1193Bridge) {
   window.ethereum = bridge;
+  window.ethereum.on("chainChanged", (chainId) => {
+    console.log("chainChanged", chainId);
+    window.location.reload();
+  });
 }
 
 export function injectSetup(
