@@ -1,5 +1,6 @@
 import { readFileSync } from "fs";
 import { Page } from "@playwright/test";
+import { resolve } from "path";
 
 export const init = async (page: Page) => {
   const options = JSON.stringify({
@@ -11,7 +12,7 @@ export const init = async (page: Page) => {
   await page.addInitScript(`
     {
       ${readFileSync(
-        require.resolve("./dist/window-ethereum.umd.js"),
+        resolve(__dirname, "dist/window-ethereum.umd.js"),
         "utf-8"
       )};
       WEB3.init(${options});

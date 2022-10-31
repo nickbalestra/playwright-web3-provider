@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: resolve(__dirname, "src/bridge.ts"),
       formats: ["umd"],
       name: "pwp",
       fileName: "window-ethereum",

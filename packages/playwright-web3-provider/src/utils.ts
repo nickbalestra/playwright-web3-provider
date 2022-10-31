@@ -1,5 +1,5 @@
 import { Eip1193Bridge } from "@ethersproject/experimental/lib/eip1193-bridge";
-import { E2ESetup } from ".";
+import { E2ESetup } from "./bridge";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function extractArgs(args: Array<any>) {

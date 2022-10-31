@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "license": "MIT",
   "author": "Nick Balestra-Foster",
-  "main": "index.ts",
+  "main": "main.js",
   "files": [
     "dist",
-    "index.ts"
+    "main.js"
   ],
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && tsc main.ts",
     "lint": "TIMING=1 eslint \"src/**/*.ts\""
   },
   "devDependencies": {
