@@ -2,11 +2,17 @@ import { readFileSync } from "fs";
 import { Page } from "@playwright/test";
 import { resolve } from "path";
 
-export const init = async (page: Page) => {
+type Web3ProviderOptions = {
+  privateKey?: string;
+  rpcUrl?: string;
+  chainId?: string;
+};
+
+export const init = async (page: Page, opts?: Web3ProviderOptions) => {
   const options = JSON.stringify({
-    privateKey: process.env.E2E_WALLET_PRIVATE_KEY,
-    rpcUrl: process.env.E2E_PROVIDER_RPC_URL,
-    chainId: process.env.E2E_PROVIDER_CHAIN_ID,
+    privateKey: opts?.privateKey ?? process.env.E2E_WALLET_PRIVATE_KEY,
+    rpcUrl: opts?.rpcUrl ?? process.env.E2E_PROVIDER_RPC_URL,
+    chainId: opts?.chainId ?? process.env.E2E_PROVIDER_CHAIN_ID,
   });
 
   await page.addInitScript(`

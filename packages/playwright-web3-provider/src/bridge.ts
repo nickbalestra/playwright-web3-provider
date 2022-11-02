@@ -11,7 +11,10 @@ export type E2ESetup = {
 };
 
 const E2E_SETUP = ({ privateKey, rpcUrl, chainId }: E2ESetup) => {
-  const E2E_PROVIDER = new JsonRpcProvider(rpcUrl, chainId);
+  const E2E_PROVIDER = new JsonRpcProvider(
+    rpcUrl,
+    chainId ? Number(chainId) : undefined
+  );
   const E2E_WALLET = privateKey
     ? new Wallet(privateKey, E2E_PROVIDER)
     : Wallet.createRandom().connect(E2E_PROVIDER);

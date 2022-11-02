@@ -136,16 +136,31 @@ exports.__esModule = true;
 exports.init = void 0;
 var fs_1 = require("fs");
 var path_1 = require("path");
-var init = function (page) {
+var init = function (page, opts) {
   return __awaiter(void 0, void 0, void 0, function () {
     var options;
-    return __generator(this, function (_a) {
-      switch (_a.label) {
+    var _a, _b, _c;
+    return __generator(this, function (_d) {
+      switch (_d.label) {
         case 0:
           options = JSON.stringify({
-            privateKey: process.env.E2E_WALLET_PRIVATE_KEY,
-            rpcUrl: process.env.E2E_PROVIDER_RPC_URL,
-            chainId: process.env.E2E_PROVIDER_CHAIN_ID,
+            privateKey:
+              (_a =
+                opts === null || opts === void 0 ? void 0 : opts.privateKey) !==
+                null && _a !== void 0
+                ? _a
+                : process.env.E2E_WALLET_PRIVATE_KEY,
+            rpcUrl:
+              (_b = opts === null || opts === void 0 ? void 0 : opts.rpcUrl) !==
+                null && _b !== void 0
+                ? _b
+                : process.env.E2E_PROVIDER_RPC_URL,
+            chainId:
+              (_c =
+                opts === null || opts === void 0 ? void 0 : opts.chainId) !==
+                null && _c !== void 0
+                ? _c
+                : process.env.E2E_PROVIDER_CHAIN_ID,
           });
           return [
             4 /*yield*/,
@@ -165,7 +180,7 @@ var init = function (page) {
             ),
           ];
         case 1:
-          _a.sent();
+          _d.sent();
           return [2 /*return*/];
       }
     });
